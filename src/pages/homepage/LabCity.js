@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import '../../assets/css/labcity.css';
 import * as THREE from "three";
-import { TweenMax, Power1 } from "gsap/gsap-core";
+// import { TweenMax, Power1 } from "gsap/gsap-core";
 
 const ThreeBackground = () => {
     const mountRef = useRef(null);
 
     useEffect(() => {
-        let createCarPos = true;
         const uSpeed = 0.001;
         // ---------- Renderer ---------- //
         const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -40,7 +39,7 @@ const ThreeBackground = () => {
         // ---------- Camera ---------- //
 
         // ---------- Fog and Background ---------- //
-        const setcolor = 0x05401c;
+        const setcolor = 0x02200c;
         // const setcolor = 0xF02050;
         // const setcolor = 0xF2F111;
         // const setcolor = 0xFF6347;
@@ -50,8 +49,8 @@ const ThreeBackground = () => {
         // ---------- Fog and Background ---------- //
 
         // ---------- Lights ---------- //
-        const ambientLight = new THREE.AmbientLight(0xffffff, 40);
-        const lightFront = new THREE.SpotLight(0xffffff, 20, 10);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 20);
+        const lightFront = new THREE.SpotLight(0xffffff, 10, 5);
         lightFront.rotation.x = 45 * Math.PI / 180;
         lightFront.rotation.z = -45 * Math.PI / 180;
         lightFront.position.set(5, 5, 5);
@@ -61,7 +60,7 @@ const ThreeBackground = () => {
         lightFront.penumbra = 0.1;
         // const spotLightHelper = new THREE.SpotLightHelper( lightFront );
         //scene.add( spotLightHelper );
-        const lightBack = new THREE.PointLight(0xFFFFFF, 50);
+        const lightBack = new THREE.PointLight(0xFFFFFF, 10);
         lightBack.position.set( 0, 6, 0 );
         scene.add(ambientLight);
         scene.add(lightBack);
@@ -158,7 +157,7 @@ const ThreeBackground = () => {
             city.add(pelement);
         };
 
-        const gridHelper = new THREE.GridHelper( 60, 120, 0xFF0000, 0x000000);
+        const gridHelper = new THREE.GridHelper( 60, 120, 0x04401c, 0x000000);
         city.add( gridHelper );
 
         scene.add(city);
@@ -188,39 +187,39 @@ const ThreeBackground = () => {
 
         // ---------- LINES world ---------- //
 
-        const createCars = function(cScale = 2, cPos = 20, cColor = 0x11FFFF) {
-            const cMat = new THREE.MeshToonMaterial({color:cColor, side:THREE.DoubleSide});
-            const cGeo = new THREE.BoxGeometry(1, cScale/40, cScale/40);
-            const cElem = new THREE.Mesh(cGeo, cMat);
-            const cAmp = 3;
+        // const createCars = function(cScale = 2, cPos = 20, cColor = 0XF7931A) {
+        //     const cMat = new THREE.MeshToonMaterial({color:cColor, side:THREE.DoubleSide});
+        //     const cGeo = new THREE.BoxGeometry(1, cScale/40, cScale/40);
+        //     const cElem = new THREE.Mesh(cGeo, cMat);
+        //     const cAmp = 3;
             
-            if (createCarPos) {
-            createCarPos = false;
-            cElem.position.x = -cPos;
-            cElem.position.z = (mathRandom(cAmp));
+        //     if (createCarPos) {
+        //     createCarPos = false;
+        //     cElem.position.x = -cPos;
+        //     cElem.position.z = (mathRandom(cAmp));
         
-            TweenMax.to(cElem.position, 3, {x:cPos, repeat:-1, yoyo:true, delay:mathRandom(3)});
-            } else {
-            createCarPos = true;
-            cElem.position.x = (mathRandom(cAmp));
-            cElem.position.z = -cPos;
-            cElem.rotation.y = 90 * Math.PI / 180;
+        //     TweenMax.to(cElem.position, 3, {x:cPos, repeat:-1, yoyo:true, delay:mathRandom(3)});
+        //     } else {
+        //     createCarPos = true;
+        //     cElem.position.x = (mathRandom(cAmp));
+        //     cElem.position.z = -cPos;
+        //     cElem.rotation.y = 90 * Math.PI / 180;
             
-            TweenMax.to(cElem.position, 5, {z:cPos, repeat:-1, yoyo:true, delay:mathRandom(3), ease:Power1.easeInOut});
-            };
-            cElem.receiveShadow = true;
-            cElem.castShadow = true;
-            cElem.position.y = Math.abs(mathRandom(5));
-            city.add(cElem);
-        };
+        //     TweenMax.to(cElem.position, 5, {z:cPos, repeat:-1, yoyo:true, delay:mathRandom(3), ease:Power1.easeInOut});
+        //     };
+        //     cElem.receiveShadow = true;
+        //     cElem.castShadow = true;
+        //     cElem.position.y = Math.abs(mathRandom(5));
+        //     city.add(cElem);
+        // };
         
-        const generateLines = () => {
-            for (let i = 0; i < 60; i++) {
-            createCars(0.1, 20);
-            };
-        };
+        // const generateLines = () => {
+        //     for (let i = 0; i < 60; i++) {
+        //     createCars(0.1, 20);
+        //     };
+        // };
 
-        generateLines();
+        // generateLines();
         init();
         animate();
 
