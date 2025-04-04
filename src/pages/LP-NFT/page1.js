@@ -1,7 +1,5 @@
-import { ChevronRight, ExternalLink } from "lucide-react";
 import React from "react";
 
-import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/Card";
 import {
   NavigationMenu,
@@ -144,29 +142,29 @@ export default function Frame() {
           <Card className="absolute md:relative w-[600px] h-[550px] -top-10 right-0 md:left-auto rounded-3xl border border-solid border-[#111112] [background:linear-gradient(319deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.05)_100%),linear-gradient(0deg,rgba(17,17,19,1)_0%,rgba(17,17,19,1)_100%)] bg-[color:var(--theme-colors-neutral-soft)]" />
         </div>
       </main>
-      <div class="w-full flex justify-center px-4 my-[100px]">
-        <div class="flex flex-col items-center gap-10 w-[1300px] relative">
-          <p class="text-[22px]">Blockchain-agnostic, supporting the following networks</p>
-          <div class="flex flex-col items-start gap-5 w-full flex-none relative self-stretch">
-            <div class="flex items-center justify-between w-full flex-none relative self-stretch">
-              <div class="relative w-[125.07px] h-[27.04px]"><img class="absolute w-[123px] h-[18px] top-[5px] left-[2px]" src="/assets/images/logos/clip-path-group.svg" /></div>
-              <img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-2.svg" />
-              <div class="relative w-[125.07px] h-[60px]"><img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/page.svg" /></div>
-              <div class="relative w-[125.07px] h-[60px]"><img class="absolute w-[106px] h-[23px] top-[19px] left-[9px]" src="/assets/images/logos/polkadot-new-dot-logo-horizontal-1.svg" /></div>
-              <div class="relative w-[125.07px] h-[60px]">
-                <div class="relative w-[103px] h-[35px] top-[13px] left-[11px]">
-                  <img class="absolute w-[61px] h-[15px] top-[10px] left-[35px]" src="/assets/images/logos/group-2.svg" /> <img class="absolute w-[22px] h-[21px] top-[7px] left-[7px]" src="/assets/images/logos/vector.svg" />
+      <div className="w-full flex justify-center px-4 my-[100px]">
+        <div className="flex flex-col items-center gap-10 w-[1300px] relative">
+          <p className="text-[22px]">Blockchain-agnostic, supporting the following networks</p>
+          <div className="flex flex-col items-start gap-5 w-full flex-none relative self-stretch">
+            <div className="flex items-center justify-between w-full flex-none relative self-stretch">
+              <div className="relative w-[125.07px] h-[27.04px]"><img alt="icon"className="absolute w-[123px] h-[18px] top-[5px] left-[2px]" src="/assets/images/logos/clip-path-group.svg" /></div>
+              <img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-2.svg" />
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/page.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="absolute w-[106px] h-[23px] top-[19px] left-[9px]" src="/assets/images/logos/polkadot-new-dot-logo-horizontal-1.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]">
+                <div className="relative w-[103px] h-[35px] top-[13px] left-[11px]">
+                  <img alt="icon"className="absolute w-[61px] h-[15px] top-[10px] left-[35px]" src="/assets/images/logos/group-2.svg" /> <img alt="icon"className="absolute w-[22px] h-[21px] top-[7px] left-[7px]" src="/assets/images/logos/vector.svg" />
                 </div>
               </div>
-              <img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/image.svg" />
+              <img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/image.svg" />
             </div>
-            <div class="flex items-center justify-between w-full flex-none relative self-stretch">
-              <div class="relative w-[125.07px] h-[60px]"><img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-solana-2.svg" /></div>
-              <div class="relative w-[125.07px] h-[60px]"><img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/zksync-seeklogo.svg" /></div>
-              <div class="relative w-[125.07px] h-[60px]"><img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/arbitrum-arb-logo-full.svg" /></div>
-              <div class="relative w-[125.07px] h-[60px]"><img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/idubisfpni-1743412399080-1.svg" /></div>
-              <div class="relative w-[125.07px] h-[60px]"><img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/full-base-logo.svg" /></div>
-              <img class="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo.svg" />
+            <div className="flex items-center justify-between w-full flex-none relative self-stretch">
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-solana-2.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/zksync-seeklogo.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/arbitrum-arb-logo-full.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/idubisfpni-1743412399080-1.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/full-base-logo.svg" /></div>
+              <img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo.svg" />
             </div>
           </div>
         </div>

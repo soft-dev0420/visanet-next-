@@ -1,14 +1,15 @@
 import React from "react";
-import Texture from "./HomepageTexture";
-import Background from "./LabCity";
+import Page1 from "./page1";
+// import Page2 from "./page2";
+import Page3 from "./page3"
 
 const ThreeBackground = () => {
     return (
-        <div className="relative w-full h-[100vh]">
-            <Background />
-            <Texture />
-            {/* <Texture className="absolute top-0 left-0 w-full h-[90vh] z-10" /> */}
-        </div>
+        <>
+            <Page1 />
+            {/* <Page2 /> */}
+            <Page3 />
+        </>
     );
 };
 
