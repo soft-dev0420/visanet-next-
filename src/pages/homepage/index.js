@@ -4,7 +4,7 @@ import Background from "./LabCity";
 
 const ThreeBackground = () => {
     return (
-        <div className="relative w-full h-screen">
+        <div className="relative w-full h-screen h-[100%]">
             <Background />
             <Texture className="absolute top-0 left-0 w-full h-full z-10" />
         </div>
