@@ -4,9 +4,9 @@ const HomePageTexture = () => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
 
   return (
-    <div className="absolute w-full h-screen overflow-hidden">
+    <div className="absolute top-0 left-0 w-full h-[100vh] z-10">
       {/* Header */}
-      <header className="top-0 left-0 w-full px-4 sm:px-6 md:px-10 py-4 flex justify-between items-center z-10">
+      <header className="w-full px-4 sm:px-6 md:px-10 py-4 flex justify-between items-center z-10">
         <img
           src="/assets/images/header-logo.png"
           alt="Integrity Logo"
@@ -18,11 +18,11 @@ const HomePageTexture = () => {
       </header>
 
       {/* Main Content */}
-      <div className="flex flex-col items-center justify-center h-full text-white text-center gap-6 px-4 mt-[80px] sm:mt-[90px]">
+      <div className="flex flex-col items-center justify-center text-white text-center gap-6 px-4 pt-[180px] sm:pt-[90px]">
         <img
           src="/assets/images/center-logo.png"
           alt="Integrity Symbol"
-          className="w-16 h-16 mb-4 drop-shadow-[0_0_20px_#22c55e] -mt-[100px] sm:-mt-[120px] scale-[1.1]"
+          className="w-16 h-16 mb-4 drop-shadow-[0_0_20px_#22c55e] scale-[1.1]"
         />
         <h1
           className="text-6xl font-custom"
@@ -31,7 +31,7 @@ const HomePageTexture = () => {
           Discover
         </h1>
         <p className="text-lg sm:text-2xl text-gray-400 max-w-md sm:max-w-xl mt-2 sm:mt-3 px-2">
-          On-Chain Protocol Bringing Bitcoin Mining Logic to Web3 Assets
+          The First On-Chain Protocol Bringing Bitcoin Mining Logic to Web3 Assets
         </p>
 
         {/* Input Boxes */}

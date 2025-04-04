@@ -133,28 +133,28 @@ const ThreeBackground = () => {
             };
             // ---------- Particular ---------- //
             
-            const gmaterial = new THREE.MeshToonMaterial({color:0x11ffff, side:THREE.DoubleSide});
-            const gparticular = new THREE.CircleGeometry(0.01, 3);
-            const aparticular = 5;
+            // const gmaterial = new THREE.MeshToonMaterial({color:0x11ffff, side:THREE.DoubleSide});
+            // const gparticular = new THREE.CircleGeometry(0.01, 3);
+            // const aparticular = 5;
             
-            for (let h = 1; h<300; h++) {
-            const particular = new THREE.Mesh(gparticular, gmaterial);
-            particular.position.set(mathRandom(aparticular), mathRandom(aparticular),mathRandom(aparticular));
-            particular.rotation.set(mathRandom(),mathRandom(),mathRandom());
-            smoke.add(particular);
-            };
+            // for (let h = 1; h<300; h++) {
+            // const particular = new THREE.Mesh(gparticular, gmaterial);
+            // particular.position.set(mathRandom(aparticular), mathRandom(aparticular),mathRandom(aparticular));
+            // particular.rotation.set(mathRandom(),mathRandom(),mathRandom());
+            // smoke.add(particular);
+            // };
             
-            const pmaterial = new THREE.MeshPhongMaterial({
-            color:0x000000,
-            side:THREE.DoubleSide,
-            opacity:0.9,
-            transparent:true});
-            const pgeometry = new THREE.PlaneGeometry(60,60);
-            const pelement = new THREE.Mesh(pgeometry, pmaterial);
-            pelement.rotation.x = -90 * Math.PI / 180;
-            pelement.position.y = -0.001;
-            pelement.receiveShadow = true;
-            city.add(pelement);
+            // const pmaterial = new THREE.MeshPhongMaterial({
+            // color:0x000000,
+            // side:THREE.DoubleSide,
+            // opacity:0.9,
+            // transparent:true});
+            // const pgeometry = new THREE.PlaneGeometry(60,60);
+            // const pelement = new THREE.Mesh(pgeometry, pmaterial);
+            // pelement.rotation.x = -90 * Math.PI / 180;
+            // pelement.position.y = -0.001;
+            // pelement.receiveShadow = true;
+            // city.add(pelement);
         };
 
         const gridHelper = new THREE.GridHelper( 60, 120, 0x04401c, 0x000000);
@@ -228,7 +228,7 @@ const ThreeBackground = () => {
     }, []);
 
     return (
-            <div ref={mountRef} className="absolute top-0 left-0 w-full h-full z-0"/>
+            <div ref={mountRef} className="absolute top-0 left-0 w-full h-[100vh] z-0"/>
     );
 };
 

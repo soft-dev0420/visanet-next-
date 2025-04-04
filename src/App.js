@@ -1,11 +1,8 @@
 import React from "react";
 import "./assets/css/body-canvas.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import HomePage from "./components/LabCity";
 import HomePage from "./pages/homepage";
-// import LabCity from "./components/HomepageTexture";
-import SecondFrame from "./pages/secondFrame";
-// import LabLaycaster from "./components/LabLaycaster";
+import Page3 from "./pages/LP-NFT/Page3";
 
 const App = () => {
     return (
@@ -13,7 +10,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 {/* <Route path="/lab-city" element={<LabCity />} /> */}
-                <Route path="/secondFrame" element={<SecondFrame />} />
+                <Route path="/page3" element={<Page3 />} />
             </Routes>
         </Router>
     );
