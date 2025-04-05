@@ -2,7 +2,7 @@
 
 import React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { cn } from "./lib/utils";
+import { cn } from "./utils";
 
 const NavigationMenu = React.forwardRef(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Root

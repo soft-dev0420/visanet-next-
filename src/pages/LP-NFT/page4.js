@@ -1,16 +1,8 @@
 import React from "react";
 
-const features = [
-  { name: 'Minting website', icon: '🟢' },
-  { name: 'Swap - DeX', icon: '🔄' },
-  { name: 'Chainlink VRF', icon: '🔗' },
-  { name: 'Smart Contract Logic', icon: '📝' },
-  { name: 'NFT with wBTC collateral', icon: '🎨' },
-]
-
 const Page4 = () => {
   return (
-    <div className="min-h-screen bg-black text-white relative">
+    <div className=" bg-black text-white relative">
       {/* How it works button */}
       <div className="flex items-center justify-center gap-2 mb-1">
         <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
@@ -32,7 +24,7 @@ const Page4 = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-4">
           <img alt="ss" src="./assets/images/cycle.png"/>
         </div>
 
