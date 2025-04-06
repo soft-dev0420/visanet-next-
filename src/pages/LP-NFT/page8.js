@@ -72,7 +72,7 @@ export default function Frame() {
           </div>
           <div className="w-full flex gap-[1vw] overflow-hidden">
             <div className="w-[1px] h-[300px] bg-gray-800 mt-[20px]"></div>
-            <div className="w-full flex flex-col md:flex-row pl-[30px] overflow-hidden">
+            <div className="w-full flex flex-col md:flex-row pl-[30px]">
               <div className="w-[260px] pr-[1vw]">
                 <div>
                   <img className="rounded-[30px] py-[10px]" src="/assets/images/kevin.png" alt="kevin"></img>
