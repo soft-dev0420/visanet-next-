@@ -19,8 +19,8 @@ const Footer = () => {
     <footer className="w-full bg-black text-white py-16 border-t border-gray-800">
       <div className="mx-auto px-4 max-w-[1024px] ">
         {/* Logo and Description */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16">
-          <div className="max-w-xl">
+        <div className="flex flex-col md:flex-row justify-between mb-16">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-6">
               <img src="/logo-small.png" alt="Integrity" className="h-6 w-6" />
               <span className="text-white text-xl">Integrity</span>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           
           {/* Navigation */}
-          <nav className="flex gap-8 mt-8 md:mt-0">
+          <nav className="flex gap-8 mt-8 md:mt-0 self-end">
             {navLinks.map((link) => (
               <a
                 key={link.name}

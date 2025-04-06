@@ -37,15 +37,6 @@ function NFTCard2() {
   );
 }
 
-function FeatureItemTemp({ icon: Icon, title }) {
-  return (
-    <div className="flex items-start align-center gap-x-1 text-sm">
-        <Icon size={16} />
-        <p className="text-zinc-400">{title}</p>
-    </div>
-  );
-}
-
 const Page5 = () => {
   return (
     <div className="min-h-screen bg-black text-white p-8">
