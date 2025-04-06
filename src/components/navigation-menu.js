@@ -28,7 +28,7 @@ const NavigationMenuLink = React.forwardRef(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Link
     ref={ref}
     className={cn(
-      "block select-none rounded-sm px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+      "block select-none rounded-sm px-4 py-2 text-[14px] font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
       className
     )}
     {...props}
