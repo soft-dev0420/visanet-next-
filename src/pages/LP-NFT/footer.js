@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="mx-auto px-4 max-w-[1024px] ">
         {/* Logo and Description */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-16">
-          <div className="max-w-xl w-[320px]">
+          <div className="max-w-xl">
             <div className="flex items-center gap-2 mb-6">
               <img src="/assets/images/integrity_logo.svg" alt="Integrity"  />
               <span className="text-white text-xl">Integrity</span>
