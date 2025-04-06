@@ -19,7 +19,8 @@ const LPNFTPage = () => {
             <Page2 />
             <Page3 />
             <Page4 />
-            <Page6 />      
+            <Page5 />
+            <Page6 />
             <Page7 />
             <Page8 />
             <Page9 />
