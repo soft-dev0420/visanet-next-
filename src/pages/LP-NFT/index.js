@@ -16,15 +16,15 @@ const LPNFTPage = () => {
         <>
             <Navbar />
             <Page1 />
-            {/* <Page2 /> */}
+            <Page2 />
             <Page3 />
-            {/* <Page4 /> */}
+            <Page4 />
             <Page5 />
-            {/* <Page6 /> */}
-            {/* <Page7 /> */}
-            {/* <Page8 /> */}
-            {/* <Page9 /> */}
-            {/* <Footer /> */}
+            <Page6 />
+            <Page7 />
+            <Page8 />
+            <Page9 />
+            <Footer />
         </>
     );
 }
