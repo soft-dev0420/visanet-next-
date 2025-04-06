@@ -70,10 +70,10 @@ export default function Frame() {
               <p className="text-[grey] mt-[4px] text-[15px]">Some details</p>
             </div>
           </div>
-          <div className="w-full flex gap-[1vw]" >
+          <div className="w-full flex gap-[1vw] overflow-hidden">
             <div className="w-[1px] h-[300px] bg-gray-800 mt-[20px]"></div>
-            <div className="w-full flex flex-col md:flex-row gap-[1vm] pl-[30px]">
-              <div className="w-[260px]">
+            <div className="w-full flex flex-col md:flex-row pl-[30px] overflow-hidden">
+              <div className="w-[260px] pr-[1vw]">
                 <div>
                   <img className="rounded-[30px] py-[10px]" src="/assets/images/kevin.png" alt="kevin"></img>
                 </div>
@@ -83,7 +83,7 @@ export default function Frame() {
                   <p className="text-gray-500 text-[13px] py-[5px] w-[240px]">Building Bitcoin mining farms since 2016, I'm driven by a passion for bridging traditional Bitcoin mining with the innovation of the Web3 world-creating solutions rooted in transparency, trust, and genuine value, which inspired the integrity protocol.</p>
                 </div>
               </div>
-              <div className="w-[260px]">
+              <div className="w-[260px] pr-[1vw]">
                 <div>
                   <img className="rounded-[30px] py-[10px]" src="/assets/images/kevin.png" alt="kevin"></img>
                 </div>
@@ -93,7 +93,7 @@ export default function Frame() {
                   <p className="text-gray-500 text-[13px] py-[5px] w-[240px]">Building Bitcoin mining farms since 2016, I'm driven by a passion for bridging traditional Bitcoin mining with the innovation of the Web3 world-creating solutions rooted in transparency, trust, and genuine value, which inspired the integrity protocol.</p>
                 </div>
               </div>
-              <div className="w-[260px]">
+              <div className="w-[260px] pr-[1vw]">
                 <div>
                   <img className="rounded-[30px] py-[10px]" src="/assets/images/kevin.png" alt="kevin"></img>
                 </div>
@@ -103,7 +103,7 @@ export default function Frame() {
                   <p className="text-gray-500 text-[13px] py-[5px] w-[240px]">Building Bitcoin mining farms since 2016, I'm driven by a passion for bridging traditional Bitcoin mining with the innovation of the Web3 world-creating solutions rooted in transparency, trust, and genuine value, which inspired the integrity protocol.</p>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-l from-black/100 to-black/0 to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-[400px] h-full bg-gradient-to-l from-black/100 to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
