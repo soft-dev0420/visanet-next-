@@ -1,25 +1,25 @@
-import { useState } from 'react'
-import HeaderSM from '../../components/Header-Page2'
-import AssetCard from '../../components/AssetCard'
-import ActivityItem from '../../components/ActivityItem'
-import Chart from '../../components/Chart'
+// import { useState } from 'react'
+// import HeaderSM from '../../components/Header-Page2'
+// import AssetCard from '../../components/AssetCard'
+// import ActivityItem from '../../components/ActivityItem'
+// import Chart from '../../components/Chart'
+import IFrame from '../../components/IFrame';
 
 function App() {
-  const [timeRange, setTimeRange] = useState('Today')
-  const [selectedAsset, setSelectedAsset] = useState('All assets')
+  // const [timeRange, setTimeRange] = useState('Today')
+  // const [selectedAsset, setSelectedAsset] = useState('All assets')
 
-  const timeRanges = ['Today', 'Yesterday', 'Last 30 days', 'All time']
+  // const timeRanges = ['Today', 'Yesterday', 'Last 30 days', 'All time']
   
   return (
     <div className="w-full h-screen bg-[url('./assets/images/sm-background.png')] bg-cover bg-center bg-no-repeat bg-black flex justify-center">
-      <div className="flex flex-col bg-black text-white max-w-[1100px] mt-[150px] overflow-hidden rounded-t-xl border-gray-800">
-        <HeaderSM />
+      <div className="flex flex-col bg-black text-white w-xl max-w-[1100px] mt-[150px] overflow-hidden rounded-t-xl border-gray-800">
+        <IFrame />
+        {/* <HeaderSM /> */}
         
-        <main className="flex-grow px-24 py-6 max-w-7xl mx-auto w-full">
+        {/* <main className="flex-grow px-24 py-6 max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Chart and Activity */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Mining Stats */}
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <img src="/assets/images/icons/bitcoin.png" alt="bitcoin" className="rounded-full" />
@@ -34,7 +34,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Time Range Selector */}
               <div className="flex space-x-3 justify-between">
                 <div>
                   {timeRanges.map((range) => (
@@ -58,10 +57,8 @@ function App() {
                 </select>
               </div>
 
-              {/* Chart */}
               <Chart />
 
-              {/* Mining Claim */}
               <div className="bg-[#111111] rounded-2xl px-4 py-3 border border-gray-800">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -79,7 +76,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Activity */}
               <div className='mt-0'>
                 <h2 className="text-xl font-medium text-start">Activity</h2>
                 <div className="space-y-2 px-4 border rounded-t-xl border-gray-800">
@@ -105,7 +101,6 @@ function App() {
               </div>
             </div>
 
-            {/* Right Column - Assets */}
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-medium">Assets</h2>
@@ -131,19 +126,10 @@ function App() {
                   address="0x8474f23..45697"
                   image="/doodle-296.png"
                 />
-                {/* <AssetCard
-                  name="CryptoPunks"
-                  number="986"
-                  hashRate="234 Th/s"
-                  power="4.7 kW/h"
-                  btc="0.90912"
-                  address="0x8474f23..45697"
-                  image="/punk-986.png"
-                /> */}
               </div>
             </div>
           </div>
-        </main>
+        </main> */}
       </div>
     </div>
   )

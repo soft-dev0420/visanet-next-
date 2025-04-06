@@ -11,7 +11,7 @@ const navItems = ["NFTs", "Gaming Assets", "Metaverse", "Team"];
 const Footer = () => {
 
   return (
-    <header className="flex justify-center w-full py-3 px-2 border-b border-[#ffffff33] bg-black text-white overflow-hidden">
+    <header className="flex justify-center w-full border-b border-[#ffffff33] bg-black text-white overflow-hidden">
       <div className="flex w-full max-w-[1024px] h-[72px] items-center justify-between">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-[7px] cursor-pointer">

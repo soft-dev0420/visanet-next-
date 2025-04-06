@@ -27,13 +27,13 @@ const challenges = [
 const Page3 = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 pt-[120px] max-w-[1024px]">
+      <div className="container mx-auto px-4 md:pt-[120px] pt-20 max-w-[1024px]">
         <div className="flex items-center justify-center gap-2 mb-6">
           <img alt="green-warning" src="./assets/images/icons/nft-page3-warning.svg"/>
           <span className="text-white-400 text-[14px] font-bold">Challenge</span>
         </div>
 
-        <h1 className="text-4xl md:text-6xl text-center font-light mb-[120px] max-w-4xl mx-auto leading-tight">
+        <h1 className="text-center font-light mx-auto max-w-4xl text-4xl/10 md:text-6xl pb-10 md:pb-[120px]">
           Because sustaining NFT value
           and engagement is challenging
         </h1>
@@ -44,11 +44,11 @@ const Page3 = () => {
               key={challenge.id}
               className={`bg-gradient-to-br ${challenge.gradient} rounded-3xl max-w-[330px] p-8 backdrop-blur-lg flex flex-col justify-between`}
             >
-              <div className="bg-gray-800 rounded-full w-12 h-12 flex items-center justify-center mb-20">
+              <div className="bg-gray-800 rounded-full w-12 h-12 flex items-center justify-center mb-12">
                 <img className="text-2xl" alt="item1" src={`./assets/images/icons/${challenge.icon}`}/>
               </div>
               <div>
-                <h3 className="text-2xl font-light mb-1 text-start">{challenge.title}</h3>
+                <h3 className="text-xl md:text-2xl font-light mb-1 text-start">{challenge.title}</h3>
                 <p className="text-gray-400 leading-relaxed text-start text-[14px]">
                   {challenge.description}
                 </p>
