@@ -7,7 +7,7 @@ export default function Frame() {
   return (
     <div className="relative w-full min-h-[100vh] bg-black text-white overflow-hidden bg-no-repeat bg-center bg-cover" style={{backgroundImage: "url(/assets/images/page5.png)"}}>
 
-      <main className="w-full flex justify-center px-4 mt-[110px]">
+      <main className="w-full flex justify-center px-4 my-[100px]">
         <div className="relative w-full max-w-[1024px] flex flex-col md:flex-row gap-[8vw]">
         
           {/* Left Content */}
