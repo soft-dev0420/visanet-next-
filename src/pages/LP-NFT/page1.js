@@ -20,7 +20,7 @@ export default function Frame() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-x-3 gap-y-3 text-start pt-8">
+            <div className="hidden sm:grid grid-cols-2 gap-x-3 gap-y-3 text-start pt-8">
               <FeatureItem
                 iconUrl="/assets/images/icons/onchain.svg"
                 title="100% On-Chain Logic"
