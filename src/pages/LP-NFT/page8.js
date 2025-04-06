@@ -28,17 +28,17 @@ export default function Frame() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-10 mt-[170px]">
+          <div className="flex items-start gap-8 mt-[170px]">
             <div className="flex items-start gap-3">
               <button className="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
-                &lt;
+                <img alt="arrow-left" src="./assets/images/icons/arrow-left.svg"/>
               </button>
               <button className="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
-                &gt;
+                <img alt="arrow-right" src="./assets/images/icons/arrow-right.svg"/>
               </button>
             </div>
-            <button className="px-[15px] py-[10px] bg-white text-black text-bold rounded-full font-button font-[number:500] text-[15px]">
-              Join the Waitlist {">"}
+            <button className="flex px-3 py-3 bg-white text-black text-bold rounded-full font-button font-[number:500] text-[15px]">
+              Join the Waitlist <img className="text-black pl-1" alt="arrow-right-black" src="./assets/images/icons/arrow-right-black.svg"/>
             </button>
           </div>
         </div>
