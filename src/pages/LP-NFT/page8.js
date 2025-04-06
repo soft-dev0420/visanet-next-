@@ -30,10 +30,10 @@ export default function Frame() {
           </div>
           <div className="flex items-start gap-10 mt-[170px]">
             <div className="flex items-start gap-3">
-              <button class="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
+              <button className="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
                 &lt;
               </button>
-              <button class="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
+              <button className="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
                 &gt;
               </button>
             </div>
@@ -71,7 +71,7 @@ export default function Frame() {
             </div>
           </div>
           <div className="w-full flex gap-[1vw]" >
-            <div class="w-[1px] h-[300px] bg-gray-800 mt-[20px]"></div>
+            <div className="w-[1px] h-[300px] bg-gray-800 mt-[20px]"></div>
             <div className="w-full flex flex-col md:flex-row gap-[1vm] pl-[30px]">
               <div className="w-[260px]">
                 <div>
@@ -103,7 +103,7 @@ export default function Frame() {
                   <p className="text-gray-500 text-[13px] py-[5px] w-[240px]">Building Bitcoin mining farms since 2016, I'm driven by a passion for bridging traditional Bitcoin mining with the innovation of the Web3 world-creating solutions rooted in transparency, trust, and genuine value, which inspired the integrity protocol.</p>
                 </div>
               </div>
-              <div class="absolute inset-0 bg-gradient-to-l from-black/100 to-black/0 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-l from-black/100 to-black/0 to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>

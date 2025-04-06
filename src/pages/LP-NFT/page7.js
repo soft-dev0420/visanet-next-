@@ -30,7 +30,7 @@ export default function Frame() {
                   transparent, <br />
                   on-chain ecosystem activity.
                 </h1>
-                <p className="max-w-[700px] text-white text-left text-[22px] text-gray-500">
+                <p className="max-w-[700px] text-left text-[22px] text-gray-500">
                   When your users interact with Bitcoin-linked utility, our
                   protocol can trigger <b className="text-white">on-chain swaps into your token</b>
                   -creating transparent utility flows and strengthening your
@@ -48,8 +48,9 @@ export default function Frame() {
                       ></img>
                     </div>
                     <div>
-                      <p className="text-gray-500">
-                        Automated swap logic -{">"} Higher interaction -{">"}{" "}
+                      <p className="flex text-gray-500">
+                        Automated swap logic &nbsp; <img alt="vector-right" src="./assets/images/icons/vector-right.svg"/> &nbsp;
+                        Higher interaction &nbsp; <img alt="vector-right" src="./assets/images/icons/vector-right.svg"/> &nbsp;
                         Enhanced project sustainability
                       </p>
                     </div>
@@ -68,8 +69,9 @@ export default function Frame() {
                 </div>
               </div>
               <div>
-                <button className="text-green-400 py-[15px] text-white text-bold rounded-full font-button font-[number:500] text-[20px]">
-                  Join the waiting list {">"}
+                <button className="flex text-green-400 py-[15px] text-bold rounded-full font-button font-[number:500] text-[20px]">
+                  Join the waiting list 
+                  <img className="pl-2" alt="arrow-right" src="./assets/images/icons/arrow-right-green.svg"/>
                 </button>
               </div>
             </div>

@@ -1,7 +1,5 @@
 import React from "react";
 
-// Navigation menu items data
-
 export default function Frame() {
   return (
     <div className="relative w-full min-h-[100vh] bg-black text-white overflow-hidden bg-no-repeat bg-center bg-cover">
@@ -16,10 +14,10 @@ export default function Frame() {
           </div>
           <div className="flex items-start gap-10 mt-[130px]">
             <div className="flex items-start gap-3">
-              <button class="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
+              <button className="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
                 &lt;
               </button>
-              <button class="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
+              <button className="w-12 h-12 rounded-full bg-gray-800 text-white text-xl flex items-center justify-center hover:bg-gray-700">
                 &gt;
               </button>
             </div>
@@ -67,8 +65,8 @@ export default function Frame() {
                     </div>
                 </div>
             </div>
-            <div class="absolute top-0 -right-4 w-[400px] h-full bg-gradient-to-l from-black/80 to-transparent pointer-events-none"></div>
-            <div class="absolute top-0 left-0 w-[400px] h-full bg-gradient-to-r from-black/80 to-transparent pointer-events-none"></div>
+            <div className="absolute top-0 -right-4 w-[400px] h-full bg-gradient-to-l from-black/80 to-transparent pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-[400px] h-full bg-gradient-to-r from-black/80 to-transparent pointer-events-none"></div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center text-white text-center gap-6 px-4 my-[80px] sm:mt-[300px]">

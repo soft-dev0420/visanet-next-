@@ -1,7 +1,7 @@
 const ActivityItem = ({ type, name, time, price }) => {
   return (
     <div className="flex items-center justify-between py-3 border-b border-gray-800">
-      <div className="flex items-center gap-3">
+      <div className="flex justify-start gap-3">
         <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
           type === 'activated' ? 'bg-green-400/10' : 'bg-red-400/10'
         }`}>
@@ -15,12 +15,14 @@ const ActivityItem = ({ type, name, time, price }) => {
             </svg>
           )}
         </div>
-        <div>
-          <div className="text-sm">{name} {type === 'activated' ? 'activated' : 'paused'}</div>
-          <div className="text-sm text-gray-500">after BTC price hit {price}</div>
+        <div className="flex flex-col items-start">
+          <p className="text-sm">
+            {name} {type === 'activated' ? 'activated ' : 'paused '}
+            <span className="text-sm text-gray-500">after BTC price hit {price}</span>
+          </p>
+          <p className="text-sm text-gray-500">{time}</p>
         </div>
       </div>
-      <span className="text-sm text-gray-500">{time}</span>
     </div>
   )
 }
