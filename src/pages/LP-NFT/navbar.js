@@ -14,9 +14,9 @@ const Footer = () => {
     <header className="flex justify-center w-full py-3 px-2 border-b border-[#ffffff33] bg-black text-white overflow-hidden">
       <div className="flex w-full max-w-[1024px] h-[72px] items-center justify-between">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-[5.25px] cursor-pointer">
+          <div className="flex items-center gap-[7px] cursor-pointer">
             <div className="w-7 h-7 relative">
-              <img src="/assets/images/integrity_logo.svg" alt="Logo" className="w-full h-full scale-[1.2]" />
+              <img src="/assets/images/integrity_logo.svg" alt="Logo" className="w-full h-full scale-[1.1]" />
             </div>
             <div className="flex items-center justify-center py-[5.25px]">
               <span className="text-[21px]">
