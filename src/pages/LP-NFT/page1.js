@@ -7,20 +7,20 @@ export default function Frame() {
   return (
     <div className="relative w-full min-h-[100vh] bg-black text-white overflow-hidden">
 
-      <main className="w-full flex justify-center px-4 mt-[130px]">
-        <div className="relative w-full max-w-[1024px] flex flex-col md:flex-row gap-[2vw]">
+      <main className="w-full flex justify-center px-4 mt-[30px] md:mt-[130px]">
+        <div className="relative w-full items-center max-w-[1024px] flex flex-col md:flex-row gap-[2vw]">
           {/* Left Content */}
           <div className="flex flex-col w-full md:w-[650px] items-start gap-15 z-10">
             <div className="flex flex-col items-start gap-5 w-full">
-              <h1 className="text-bold text-4xl md:text-[47px] text-left text-white leading-[1.1]">
+              <h1 className="text-bold text-[33px] text-center md:text-[47px] md:text-left text-white leading-[1.1]">
                 Make Any NFT Behave Like a Bitcoin Miner—Without the Hardware
               </h1>
-              <p className="text-gray-300 text-left text-[20px] leading-[2]">
+              <p className="text-center md:text-left text-[17px] md:text-[20px] text-gray-300 leading-[2]">
                 Our protocol adds a programmable layer that emulates Bitcoin mining mechanics using real-time blockchain data—completely on-chain, trustless, and yield-free.
               </p>
             </div>
 
-            <div className="hidden sm:grid grid-cols-2 gap-x-3 gap-y-3 text-start pt-8">
+            <div className="hidden md:grid grid-cols-2 gap-x-3 gap-y-3 text-start pt-8">
               <FeatureItem
                 iconUrl="/assets/images/icons/onchain.svg"
                 title="100% On-Chain Logic"
@@ -53,7 +53,7 @@ export default function Frame() {
               />
             </div>
 
-            <div className="flex items-start gap-3 mt-[30px]">
+            <div className="w-full flex flex-col items-center md:flex-row md:items-left gap-3 mt-[30px]">
               <button
                 className="px-4 py-2 bg-white text-black text-bold rounded-full font-button font-[number:500] text-[16px]"
                 data-sizes-mode="large"
@@ -78,32 +78,37 @@ export default function Frame() {
 
           {/* Right Content - Card with Visual Elements */}
           <div
-            className="absolute md:relative w-[477px] -top-10 right-0 md:left-auto rounded-3xl">
+            className="w-[90vw] md:relative md:w-[477px] -top-10 right-0 md:left-auto rounded-3xl">
             <VideoCard/>
           </div>
         </div>
       </main>
 
-      <div className="w-full flex justify-center px-4 my-[100px]">
-        <div className="flex flex-col items-center gap-10 w-[1024px] relative">
-          <p className="text-[18px]">Blockchain-agnostic, supporting the following networks</p>
-          <div className="grid grid-cols-6 gap-y-2 text-start pt-4 justify-items-center w-[1024px]">
-            <div className=" w-[125.07px] h-[60px]"><img alt="icon" className=" w-[125.07px] h-[60px]" src="/assets/images/logos/clip-path-group.svg" /></div>
-            <img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-2.svg" />
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/page.svg" /></div>
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="absolute w-[106px] h-[23px] top-[19px] left-[9px]" src="/assets/images/logos/polkadot-new-dot-logo-horizontal-1.svg" /></div>
-            <div className="relative w-[125.07px] h-[60px]">
-              <div className="relative w-[103px] h-[35px] top-[13px] left-[11px]">
-                <img alt="icon"className="absolute w-[61px] h-[15px] top-[10px] left-[35px]" src="/assets/images/logos/group-2.svg" /> <img alt="icon"className="absolute w-[22px] h-[21px] top-[7px] left-[7px]" src="/assets/images/logos/vector.svg" />
+      <div className="w-full flex justify-center px-4 my-[30px] md:my-[100px]">
+        <div className="flex flex-col items-center gap-10 w-[90vw] md:w-[1024px] relative">
+          <p className="flex text-[18px] text-center">Blockchain-agnostic, supporting the following networks</p>
+          <div className="gap-y-2 text-start pt-4 justify-items-center w-[1024px]">
+            <div className="grid grid-cols-6 text-start justify-items-center w-full">
+              <div className=" w-[125.07px] h-[60px]"><img alt="icon" className=" w-[125.07px] h-[60px]" src="/assets/images/logos/clip-path-group.svg" /></div>
+              <img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-2.svg" />
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/page.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="absolute w-[106px] h-[23px] top-[19px] left-[9px]" src="/assets/images/logos/polkadot-new-dot-logo-horizontal-1.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]">
+                <div className="relative w-[103px] h-[35px] top-[13px] left-[11px]">
+                  <img alt="icon"className="absolute w-[61px] h-[15px] top-[10px] left-[35px]" src="/assets/images/logos/group-2.svg" /> <img alt="icon"className="absolute w-[22px] h-[21px] top-[7px] left-[7px]" src="/assets/images/logos/vector.svg" />
+                </div>
               </div>
+              <img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/image.svg" />
             </div>
-            <img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/image.svg" />
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-solana-2.svg" /></div>
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/zksync-seeklogo.svg" /></div>
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/arbitrum-arb-logo-full.svg" /></div>
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/idubisfpni-1743412399080-1.svg" /></div>
-            <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/full-base-logo.svg" /></div>
-            <img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo.svg" />
+            <div className="hidden md:grid grid-cols-6 text-start justify-items-center w-full">
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo-solana-2.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/zksync-seeklogo.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/arbitrum-arb-logo-full.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/idubisfpni-1743412399080-1.svg" /></div>
+              <div className="relative w-[125.07px] h-[60px]"><img alt="icon" className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/full-base-logo.svg" /></div>
+              <img alt="icon"className="relative w-[125.07px] h-[60px]" src="/assets/images/logos/logo.svg" />
+            </div>
+            
           </div>
         </div>
       </div>
