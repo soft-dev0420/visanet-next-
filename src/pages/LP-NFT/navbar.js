@@ -12,14 +12,14 @@ const Footer = () => {
 
   return (
     <header className="flex justify-center w-full py-3 px-2 border-b border-[#ffffff33] bg-black text-white overflow-hidden">
-      <div className="flex w-full max-w-[1024px] items-center justify-between">
+      <div className="flex w-full max-w-[1024px] h-[72px] items-center justify-between">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-[5.25px] cursor-pointer">
             <div className="w-7 h-7 relative">
               <img src="/assets/images/integrity_logo.svg" alt="Logo" className="w-full h-full scale-[1.2]" />
             </div>
             <div className="flex items-center justify-center py-[5.25px]">
-              <span className="text-[24px]">
+              <span className="text-[21px]">
                 Integrity
               </span>
             </div>
@@ -41,7 +41,7 @@ const Footer = () => {
 
         {/* Documentation Button */}
         <button
-          className="border-2 py-1 px-3 bg-[#00000012] rounded-[100px] border-[#ffffff33] text-white"
+          className="border-2 py-1 px-3 bg-[#00000012] rounded-[100px] border-[#ffffff33] text-white text-[14px]"
         >
           Documentation
         </button>

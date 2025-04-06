@@ -12,15 +12,15 @@ export default function Frame() {
           {/* Left Content */}
           <div className="flex flex-col w-full md:w-[650px] items-start gap-15 z-10">
             <div className="flex flex-col items-start gap-5 w-full">
-              <h1 className="text-bold text-4xl md:text-6xl text-left text-white leading-[1.1]">
+              <h1 className="text-bold text-4xl md:text-[47px] text-left text-white leading-[1.1]">
                 Make Any NFT Behave Like a Bitcoin Miner—Without the Hardware
               </h1>
-              <p className="text-white text-left text-[20px]">
+              <p className="text-gray-300 text-left text-[20px] leading-[2]">
                 Our protocol adds a programmable layer that emulates Bitcoin mining mechanics using real-time blockchain data—completely on-chain, trustless, and yield-free.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-start pt-4">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-3 text-start pt-8">
               <FeatureItem
                 iconUrl="/assets/images/icons/onchain.svg"
                 title="100% On-Chain Logic"
@@ -58,14 +58,20 @@ export default function Frame() {
                 className="px-4 py-2 bg-white text-black text-bold rounded-full font-button font-[number:500] text-[16px]"
                 data-sizes-mode="large"
               >
-                Join the Waitlist {'>'}
+                <div className="flex">
+                  <b>Join the Waitlist </b>
+                  <img className="px-[10px]" src="/assets/images/icons/gt.svg" alt="gt"></img>
+                </div>
               </button>
 
               <button
                 className="px-4 py-2 text-white text-bold rounded-full font-button font-[number:500] text-[16px] border border-[#a3979733]"
                 data-sizes-mode="large"
               >
-                Try our dApp {'>'}
+                <div className="flex">
+                  <b>Try our dApp </b>
+                  <img className="px-[10px]" src="/assets/images/icons/gt_white.svg" alt="gt"></img>
+                </div>
               </button>
             </div>
           </div>
