@@ -26,7 +26,7 @@ const challenges = [
 
 const Page3 = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white pb-[50px]">
       <div className="container mx-auto px-4 md:pt-[120px] pt-20 max-w-[1024px]">
         <div className="flex items-center justify-center gap-2 mb-6">
           <img alt="green-warning" src="./assets/images/icons/nft-page3-warning.svg"/>
