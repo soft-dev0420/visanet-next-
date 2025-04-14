@@ -30,3 +30,4 @@
 
 # vercel
 /client/.vercel
+/server/node_modules
