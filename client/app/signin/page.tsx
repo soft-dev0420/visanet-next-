@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { useRouter } from "next/navigation"; // Import useRouter
 
 import Axios from 'axios'
 import define_data from '../const';
-
+import { UserContext } from '@/context/UserContext';
 Axios.defaults.baseURL = define_data.url;
 
 const SigninPage = () => {
+  const { login } = useContext(UserContext);
   const [showPassword, setShowPassword] = useState(false);
   const [email, setFullemail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,14 +28,17 @@ const SigninPage = () => {
     }
 
     Axios.post("/auth/signin", data)
-      .then(data => router.push("/"))
-      .catch(err=>{
-      if (err.response && err.response.data && err.response.data.msg) {
-        setErrorMessage(err.response.data.msg); // Set error message from server
-      } else {
-        setErrorMessage("An unexpected error occurred. Please try again."); // Fallback error message
-      }
-    })
+      .then(data => {
+        login(data.data.token)
+        router.push("/");
+      })
+      .catch(err => {
+        if (err.response && err.response.data && err.response.data.msg) {
+          setErrorMessage(err.response.data.msg); // Set error message from server
+        } else {
+          setErrorMessage("An unexpected error occurred. Please try again."); // Fallback error message
+        }
+      })
   }
   return (
     <>
@@ -62,8 +66,8 @@ const SigninPage = () => {
                     <input
                       type="email"
                       name="email"
-                      value = {email}
-                      onChange={(e)=>setFullemail(e.target.value)}
+                      value={email}
+                      onChange={(e) => setFullemail(e.target.value)}
                       placeholder="Enter your Email"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
@@ -151,7 +155,7 @@ const SigninPage = () => {
                     </div>
                   </div>
                   <div className="mb-6">
-                    <button className="shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90" onClick={(e)=> signIn(e)}>
+                    <button className="shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90" onClick={(e) => signIn(e)}>
                       Sign in
                     </button>
                   </div>
