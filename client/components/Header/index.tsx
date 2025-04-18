@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useContext } from "react";
 import menuData from "./menuData";
+import { useTheme } from "next-themes";
 import { UserContext } from "@/context/UserContext";
 
 const Header = () => {
@@ -12,6 +13,8 @@ const Header = () => {
   const { user } = useContext(UserContext);
   const { logout } = useContext(UserContext);
   const [u_name, setName] = useState("");
+  const { theme, setTheme } = useTheme();
+  setTheme("dark");
 
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
@@ -49,7 +52,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
+        className={`header bg-[#F5F6F0] left-0 top-0 z-40 flex w-full items-center ${sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "absolute bg-transparent"
           }`}
@@ -63,7 +66,7 @@ const Header = () => {
                   } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo/logo.jpg"
                   alt="logo"
                   width={140}
                   height={30}
@@ -79,7 +82,7 @@ const Header = () => {
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
-              <div>
+              {user?.user ?<div>
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -157,7 +160,7 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
-              </div>
+              </div>:<div></div>}
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 {user?.user ? <>
                   <Link

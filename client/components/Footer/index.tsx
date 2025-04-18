@@ -4,9 +4,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <>
       <footer
-        className="wow fadeInUp dark:bg-gray-dark relative z-10 bg-white pt-16 md:pt-20 lg:pt-24"
+        className="bg-[#F5F6F0] wow fadeInUp dark:bg-gray-dark relative z-10"
         data-wow-delay=".1s"
       >
         <div className="container">
@@ -195,16 +194,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Template by UIdeck and{" "}
-              <a href="https://nextjstemplates.com" rel="nofollow noopener">
-                Next.js Templates
-              </a>
-            </p>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
@@ -398,7 +387,7 @@ const Footer = () => {
           </svg>
         </div>
       </footer>
-    </>
+
   );
 };
 

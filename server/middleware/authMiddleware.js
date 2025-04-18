@@ -1,9 +1,18 @@
 const jwt = require('jsonwebtoken');
 
 const tokenCheck = (req, res, next) => {
-    const token = req.header('Authorization');
-    if (!token) return res.status(401).json({ msg: 'No token, authorization denied' });
+    const { name, password } = req.body;
 
+    const autheader = req.headers.authorization;
+    if (!name || !password) {
+        return res.status(400).json({ msg: 'Please provide all required fields' });
+    }
+    if (password.length < 6) {
+        return res.status(400).json({ msg: 'Password must be at least 6 characters long' });
+    }
+
+    if (!autheader) return res.status(401).json({ msg: 'No token, authorization denied' });
+    const token = autheader.split(' ')[1];
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded.user;

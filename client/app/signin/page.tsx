@@ -9,7 +9,7 @@ import { UserContext } from '@/context/UserContext';
 Axios.defaults.baseURL = define_data.url;
 
 const SigninPage = () => {
-  const { login } = useContext(UserContext);
+  const { login, setToken } = useContext(UserContext);
   const [showPassword, setShowPassword] = useState(false);
   const [email, setFullemail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +29,8 @@ const SigninPage = () => {
 
     Axios.post("/auth/signin", data)
       .then(data => {
-        login(data.data.token)
+        login(data.data.token);
+        setToken(data.data.token);
         router.push("/");
       })
       .catch(err => {

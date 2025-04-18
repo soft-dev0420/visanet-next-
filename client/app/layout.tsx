@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
-
+import Background from "@/components/LabCity"
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
-
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <head></head>
+      <body className={`bg-[#F5F6F0] ${inter.className}`}>
+        
         <Providers>
           <Header />
           {children}
