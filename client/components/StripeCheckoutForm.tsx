@@ -37,7 +37,7 @@ const StripeCheckoutForm = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState(false);
-    const amount = 10;
+    const [amount, setAmount] = useState("0");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -76,27 +76,39 @@ const StripeCheckoutForm = () => {
         <form
             onSubmit={handleSubmit}
             autoComplete="off"
-            className="max-w-md mx-auto bg-white p-6 rounded-lg shadow space-y-5"
+            className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-xl space-y-6 border border-gray-100"
         >
-            <h2 className="text-xl font-bold">Pay ${amount}.00</h2>
+                     {/* Transfer Amount */}
+            <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Transfer Amount ($)</label>
+                <input
+                    type="number"
+                    min={1}
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    placeholder="Enter amount"
+                    className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    required
+                />
+            </div>
 
             {/* Name on Card */}
             <div>
-                <label className="block text-sm font-medium mb-1">Name on Card</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Name on Card</label>
                 <input
                     type="text"
                     autoComplete="off"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    required
                     placeholder="John Doe"
-                    className="w-full border rounded-md p-2"
+                    className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    required
                 />
             </div>
 
             {/* Card Number */}
             <div>
-                <label className="block text-sm font-medium mb-1">Card Number</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Card Number</label>
                 <div className="border rounded-md p-2 bg-white">
                     <CardNumberElement options={inputStyle} />
                 </div>
@@ -105,35 +117,36 @@ const StripeCheckoutForm = () => {
             {/* Expiration & CVC */}
             <div className="grid grid-cols-2 gap-4">
                 <div>
-                    <label className="block text-sm font-medium mb-1">Expiration</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Expiration</label>
                     <div className="border rounded-md p-2 bg-white">
                         <CardExpiryElement options={inputStyle} />
                     </div>
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium mb-1">CVC</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">CVC</label>
                     <div className="border rounded-md p-2 bg-white">
                         <CardCvcElement options={inputStyle} />
                     </div>
                 </div>
             </div>
 
-            {/* Errors & Success */}
+            {/* Error or Success Message */}
             {error && <p className="text-red-500 text-sm">{error}</p>}
             {success && (
-                <p className="text-green-600 font-medium">✅ Payment successful!</p>
+                <p className="text-green-600 font-medium text-center">✅ Payment successful!</p>
             )}
 
             {/* Pay Button */}
             <button
                 type="submit"
                 disabled={!stripe || loading}
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition disabled:opacity-50"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:opacity-50"
             >
-                {loading ? 'Processing...' : `Pay $${amount}`}
+                {loading ? 'Processing...' : `S   e   n   d`}
             </button>
         </form>
+
     );
 };
 

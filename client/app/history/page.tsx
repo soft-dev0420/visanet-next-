@@ -11,7 +11,7 @@ const data = Array.from({ length: 45 }, (_, i) => ({
     other: '✔️',
 }))
 
-const PAGE_SIZE = 10
+const PAGE_SIZE = 8
 const PricePage = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const totalPages = Math.ceil(data.length / PAGE_SIZE)

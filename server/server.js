@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const paymentRoutes = require('./routes/payments');
 
 const app = express();
 require('dotenv').config();
@@ -12,6 +13,7 @@ app.use(bodyParser.json()); // Parses JSON request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/auth', authRoutes);
+app.use('/api/payments', paymentRoutes);
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {

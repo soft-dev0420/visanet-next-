@@ -25,6 +25,7 @@
     "react-modal-video": "^2.0.0",
     "react-toastify": "^11.0.5",
     "stripe": "^18.0.0",
+    "swiper": "^11.2.6",
     "three": "^0.175.0"
   },
   "devDependencies": {
